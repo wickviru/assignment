@@ -1,0 +1,17 @@
+:root {
+  --primay: black;
+  --bg-primay: white;
+
+  --link: #2a0b0b;
+}
+@font-face {
+  font-family: 'Montserrat Regular';
+  font-style: normal;
+  src: url('@/assets/fonts/Montserrat-Regular.ttf') format('truetype'),
+    url('@/assets/fonts/Montserrat-Regular.ttf') format('truetype');
+}
+.App {
+  text-align: center;
+  font-size: 18px;
+}
+

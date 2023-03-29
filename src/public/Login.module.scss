@@ -1,0 +1,23 @@
+.loginContainer {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 40%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 50px 60px 20px 60px;
+  text-align: left;
+  &__title {
+    text-align: center;
+  }
+  &__error {
+    margin-bottom: 20px;
+  }
+  :global {
+    .ant-btn-primary {
+      display: block;
+      margin: auto;
+    }
+  }
+}
