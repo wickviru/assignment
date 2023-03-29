@@ -6,6 +6,7 @@ import InterviewShow from './InterviewShow';
 import EmptyList from './EmptyList';
 import styles from './DashBoard.module.scss';
 import { Spin } from 'antd';
+import Heading from './Heading';
 
 interface InterviewProps {
   name: string;
@@ -54,17 +55,17 @@ export const Dashboard = () => {
 
    return (
     <>
-      <h4 className={styles['dashBoardContainer__heading']}>Today</h4>
+      <Heading heading='Today'/>
         {todayInterviews.length!=0?todayInterviews.map((interview) => (
           <InterviewShow name={interview.name} time={interview.time.substring(11,16)}/>
         )):<EmptyList message='today'/>}
 
-      <h4 className={styles['dashBoardContainer__heading']}>Tomorrow</h4>
+      <Heading heading='Tomorrow'/>
       {tomorrowInterviews.length!=0?tomorrowInterviews.map((interview) => (
           <InterviewShow name={interview.name} time={interview.time.substring(0,10)+" "+interview.time.substring(11,16)}/>
         )):<EmptyList message='tomorrow'/>}
 
-      <h4 className={styles['dashBoardContainer__heading']}>Other Dates</h4>
+      <Heading heading='Other Dates'/>
       {upcomingInterviews.length!=0?upcomingInterviews.map((interview) => (
           <InterviewShow name={interview.name} time={interview.time.substring(0,10)+" "+interview.time.substring(11,16)}/>
         )):<EmptyList message='other dates'/>}

@@ -22,7 +22,7 @@ const InterviewShow :React.FC<InterviewProps> = ({ name, time }) => {
   return (
     <>
     <Row>
-        <Col span={12} offset={6} style={{height: 80,backgroundColor: hovered ? 'rgb(230, 255, 230)' : 'transparent',borderBottom:'1px solid black',borderRadius:5}} onMouseEnter={handleHover}
+        <Col span={24} sm={{ span: 24}} lg={{ span: 12,offset:6 }} md={{ span: 20,offset:2 }} style={{height: 80,backgroundColor: hovered ? 'rgb(230, 255, 230)' : 'transparent',borderBottom:'1px solid black',borderRadius:5}} onMouseEnter={handleHover}
         onMouseLeave={handleLeave}>
             <Row>
                 <Col span={10}  style={{marginTop:10,paddingLeft:10}}>
